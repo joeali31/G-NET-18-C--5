@@ -1,4 +1,6 @@
-﻿namespace Assignment5
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Assignment5
 {
     internal class Program
     {
@@ -191,6 +193,51 @@
             //Console.WriteLine($"{firstNumber} {Operation} {secounNumber} = {Calculator(firstNumber, secounNumber, Operation)}");
             #endregion
 
+
+            #region Question5 Calculator Functions With out
+            //double firstNumber;
+            //double secounNumber;
+            //double result;
+            //char Operation;
+
+            //while (true)
+            //{
+            //    Console.Write("Enter First Number: ");
+            //    bool isparsed = double.TryParse(Console.ReadLine(), out firstNumber);
+
+            //    if (isparsed)
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Enter Secound Number : ");
+            //    bool isparsed = double.TryParse(Console.ReadLine(), out secounNumber);
+
+            //    if (isparsed)
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Enter Operation an (+, -, *, /) : ");
+            //    bool isparsed = char.TryParse(Console.ReadLine(), out Operation);
+
+            //    if (isparsed)
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //CalculatorWithOut(firstNumber, secounNumber, Operation, out result);
+
+            //Console.WriteLine($"{firstNumber} {Operation} {secounNumber} = {result}");
+            #endregion
+
         }
 
         //Question4 Calculator Functions
@@ -217,5 +264,32 @@
 
             return sum;
         }
+
+        //Question5 Calculator Functions With out
+        static void CalculatorWithOut(double firstNumber, double SecondNumber, char Operation, out double result)
+        {
+            double sum = 0;
+
+            if (Operation == '+')
+            {
+                sum = firstNumber + SecondNumber;
+            }
+            else if (Operation == '-')
+            {
+                sum = firstNumber - SecondNumber;
+            }
+            else if (Operation == '*')
+            {
+                sum = firstNumber * SecondNumber;
+            }
+            else if (Operation == '/')
+            {
+                sum = firstNumber / SecondNumber;
+            }
+
+            result = sum;
+
+        }
+
     }
 }
