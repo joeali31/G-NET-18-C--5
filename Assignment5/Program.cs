@@ -99,6 +99,56 @@
             //}
             #endregion
 
+
+            #region Question3
+            //int[,] arr = new int[3, 4];
+            //int number;
+            //bool isparsed;
+
+
+            //for (int i = 0; i < arr.GetLength(0); i++)
+            //{
+            //    Console.WriteLine($"Student number {i + 1}");
+
+            //    for (int j = 0; j < arr.GetLength(1); j++)
+            //    {
+            //        do
+            //        {
+            //            Console.Write($"Enter your grade [{i} , {j}] = ");
+            //            isparsed = int.TryParse(Console.ReadLine(), out number);
+
+            //            if (number > 100 || number < 0)
+            //            {
+            //                isparsed = false;
+            //            }
+            //        }
+            //        while (!isparsed);
+
+            //        arr[i, j] = number;
+            //    }
+
+            //    Console.WriteLine();
+            //}
+
+
+            //for (int i = 0; i < arr.GetLength(0); i++)
+            //{
+            //    Console.Write($"\nstudent number {i + 1}: ");
+
+            //    for (int j = 0; j < arr.GetLength(1); j++)
+            //    {
+            //        Console.Write(arr[i, j]);
+
+            //        if (j == (arr.GetLength(1) - 1))
+            //        {
+            //            break;
+            //        }
+
+            //        Console.Write(", ");
+            //    }
+            //}
+            #endregion
+
         }
     }
 }
