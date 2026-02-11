@@ -238,6 +238,42 @@ namespace Assignment5
             //Console.WriteLine($"{firstNumber} {Operation} {secounNumber} = {result}");
             #endregion
 
+
+            #region Question6 
+            //int[] studentGrades = new int[5];
+
+            //for (int i = 0; i < studentGrades.Length; i++)
+            //{
+
+            //    while (true)
+            //    {
+            //        int grade;
+
+            //        Console.Write($"Enter Score For Student {i + 1}: ");
+
+            //        bool isParsed = int.TryParse(Console.ReadLine(), out grade);
+
+            //        if (isParsed)
+            //        {
+            //            studentGrades[i] = grade;
+            //            break;
+            //        }
+
+            //    }
+            //}
+
+            //Console.WriteLine("\n -------- Report --------");
+
+            //for (int i = 0; i < studentGrades.Length; i++)
+            //{
+            //    Console.WriteLine($"Student {i + 1}: {studentGrades[i]} -> Grade: {GetGrades(studentGrades[i])}");
+            //}
+
+            //Console.WriteLine($"\nAverage : {GetAverage(studentGrades)}");
+            //Console.WriteLine($"Highest Score: {GetMaxScore(studentGrades)}");
+            //Console.WriteLine($"Lowest Score: {GetMinScore(studentGrades)}");
+            #endregion
+
         }
 
         //Question4 Calculator Functions
@@ -289,6 +325,67 @@ namespace Assignment5
 
             result = sum;
 
+        }
+
+        //Question6
+        static Grades GetGrades(int grade)
+        {
+            switch (grade)
+            {
+                case >= 90:
+                    return Grades.A;
+                case >= 80:
+                    return Grades.B;
+                case >= 70:
+                    return Grades.C;
+                case >= 60:
+                    return Grades.D;
+                case < 60:
+                    return Grades.F;
+            }
+
+        }
+
+        static double GetAverage(int[] students)
+        {
+            double Sum = 0;
+
+            foreach (var s in students)
+            {
+                Sum += s;
+            }
+            return Sum / students.Length;
+
+        }
+
+        static int GetMaxScore(int[] students)
+        {
+            int maxScore = 0;
+
+            foreach (var item in students)
+            {
+                if (item > maxScore)
+                {
+                    maxScore = item;
+                }
+            }
+
+            return maxScore;
+        }
+
+        static int GetMinScore(int[] students)
+        {
+            int minScore = students[0];
+
+            foreach (var item in students)
+            {
+                if (item < minScore)
+                {
+                    minScore = item;
+                }
+            }
+
+            return minScore;
         }
 
     }
