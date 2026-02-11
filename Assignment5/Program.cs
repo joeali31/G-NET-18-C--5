@@ -149,6 +149,73 @@
             //}
             #endregion
 
+
+            #region Question4 Calculator Functions
+            //int firstNumber;
+            //int secounNumber;
+            //char Operation;
+
+            //while (true)
+            //{
+            //    Console.Write("Enter First Number: ");
+            //    bool isparsed = int.TryParse(Console.ReadLine(), out firstNumber);
+
+            //    if (isparsed)
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Enter Secound Number : ");
+            //    bool isparsed = int.TryParse(Console.ReadLine(), out secounNumber);
+
+            //    if (isparsed)
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Enter Operation an (+, -, *, /) : ");
+            //    bool isparsed = char.TryParse(Console.ReadLine(), out Operation);
+
+            //    if (isparsed)
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //Console.WriteLine($"{firstNumber} {Operation} {secounNumber} = {Calculator(firstNumber, secounNumber, Operation)}");
+            #endregion
+
+        }
+
+        //Question4 Calculator Functions
+        static double Calculator(double firstNumber, double SecondNumber, char Operation)
+        {
+            double sum = 0;
+
+            if (Operation == '+')
+            {
+                sum = firstNumber + SecondNumber;
+            }
+            else if (Operation == '-')
+            {
+                sum = firstNumber - SecondNumber;
+            }
+            else if (Operation == '*')
+            {
+                sum = firstNumber * SecondNumber;
+            }
+            else if (Operation == '/')
+            {
+                sum = firstNumber / SecondNumber;
+            }
+
+            return sum;
         }
     }
 }
